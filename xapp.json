@@ -1,0 +1,162 @@
+{
+  "name": "todo",
+  "packageId": "org.xpbox.todo",
+  "entry": "./dist/index.html",
+  "defaultSize": [
+    4,
+    4
+  ],
+  "resizable": {
+    "min": [
+      2,
+      2
+    ],
+    "max": [
+      8,
+      8
+    ]
+  },
+  "style": {
+    "blur": 14
+  },
+  "export": {
+    "insertItem": {
+      "description": "插入一条待办事项",
+      "param": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "标题"
+          },
+          "desc": {
+            "type": "string",
+            "description": "详情，不能多于20字"
+          }
+        }
+      },
+      "return": {
+      }
+    },
+    "getFinishedList": {
+      "description": "获取已完成的待办列表",
+      "return": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "description": "待办事项的id"
+            },
+            "title": {
+              "type": "string",
+              "description": "标题"
+            },
+            "desc": {
+              "type": "string",
+              "description": "详情"
+            }
+          }
+        }
+      }
+    },
+    "getTodoList": {
+      "description": "获取待办的列表",
+      "return": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "description": "待办事项的id"
+            },
+            "title": {
+              "type": "string",
+              "description": "标题"
+            },
+            "desc": {
+              "type": "string",
+              "description": "详情"
+            }
+          }
+        }
+      }
+    },
+    "finishItem": {
+      "description": "完成一条待办事项",
+      "param": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "待办事项的id"
+          }
+        }
+      },
+      "return": {
+      }
+    },
+    "updateItem": {
+      "description": "更新一条待办事项",
+      "param": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "待办事项的id"
+          },
+          "title": {
+            "type": "string",
+            "description": "标题"
+          },
+          "desc": {
+            "type": "string",
+            "description": "详情"
+          }
+        }
+      },
+      "return": {
+      }
+    },
+    "deleteItem": {
+      "description": "删除一条待办事项",
+      "param": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "待办事项的id"
+          }
+        }
+      },
+      "return": {
+      }
+    },
+    "deleteFinishedItem": {
+      "description": "删除一条已完成的事项",
+      "param": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "已完成待办事项的id"
+          }
+        }
+      },
+      "return": {
+      }
+    },
+    "clearFinished": {
+      "description": "清空已完成的待办事项",
+      "return": {
+      }
+    },
+    "finishAll": {
+      "description": "完成所有待办事项",
+      "return": {
+      }
+    }
+  }
+}
